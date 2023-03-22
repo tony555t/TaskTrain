@@ -1,0 +1,816 @@
+  [1m[35m (142.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (308.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230322074218)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230322074218"]]
+  [1m[36mTRANSACTION (150.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-22 07:54:43.066631"], ["updated_at", "2023-03-22 07:54:43.066631"]]
+  [1m[36mTRANSACTION (91.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:25:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (18.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+        if user,valid?
+               ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:8: else without rescue is useless
+        else
+        ^~~~
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+            app_response:
+                        ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+...message:"something went wrong",status: :unprocessable_entity)
+...                              ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony"
+  "email":"antony@moringa.com"
+  "password":"pigaluku"
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:25:34 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+        if user,valid?
+               ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:8: else without rescue is useless
+        else
+        ^~~~
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+            app_response:
+                        ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+...message:"something went wrong",status: :unprocessable_entity)
+...                              ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  "password":"pigaluku"
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:27:31 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+        if user,valid?
+               ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:8: else without rescue is useless
+        else
+        ^~~~
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+            app_response:
+                        ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+...message:"something went wrong",status: :unprocessable_entity)
+...                              ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:28:13 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+        if user,valid?
+               ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:8: else without rescue is useless
+        else
+        ^~~~
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+            app_response:
+                        ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+...message:"something went wrong",status: :unprocessable_entity...
+...                              ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:29:02 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+        if user,valid?
+               ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:8: else without rescue is useless
+        else
+        ^~~~
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+            app_response:
+                        ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+...message:"something went wrong",status: :unprocessable_entity...
+...                              ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started GET "/" for ::1 at 2023-03-22 11:29:42 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 281.6ms | Allocations: 766)
+Completed 200 OK in 1600ms (Views: 777.7ms | Allocations: 6582)
+
+
+Started GET "/users" for ::1 at 2023-03-22 11:29:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:30:22 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+        if user,valid?
+               ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:8: else without rescue is useless
+        else
+        ^~~~
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+            app_response:
+                        ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+...message:"something went wrong",status: :unprocessable_entity...
+...                              ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:8: else without rescue is useless
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:31:36 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+        if user,valid?
+               ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:7: syntax error, unexpected local variable or method, expecting ')'
+...ration was successfull',}status: created, data: user)
+...                         ^~~~~~
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+...essage:"something went wrong"},status: :unprocessable_entity...
+...                              ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:7: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:6: syntax error, unexpected ',', expecting `then' or ';' or '\n'
+app/controllers/users_controller.rb:7: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected `end', expecting end-of-input
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:32:58 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+            app_response:
+                        ^
+/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+...essage:"something went wrong"},status: :unprocessable_entity...
+...                              ^
+):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:10: syntax error, unexpected ',', expecting ')'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:33:19 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/application_controller.rb:6: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/application_controller.rb:6: syntax error, unexpected '\n', expecting =>
+app/controllers/application_controller.rb:6: syntax error, unexpected '\n', expecting =>
+app/controllers/users_controller.rb:1:in `<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:34:12 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/application_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/application_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/application_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users_controller.rb:1:in `<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:35:44 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/models/user.rb:4: syntax error, unexpected local variable or method, expecting '}'
+...um: 8},uniqueness:true presence: true}
+...                       ^~~~~~~~
+):
+  
+app/models/user.rb:4: syntax error, unexpected local variable or method, expecting '}'
+app/models/user.rb:4: syntax error, unexpected local variable or method, expecting '}'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:36:26 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 1ms (Allocations: 148)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:23:in `user_params'
+app/controllers/users_controller.rb:5:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:37:53 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  
+}
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 1ms (Allocations: 127)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:39:33 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd60c714618>, params: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (19.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 21.6ms | Allocations: 20446)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:2:in `app_response'
+app/controllers/users_controller.rb:9:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:42:18 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5f45024f0>, params: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.4ms | Allocations: 5482)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:3:in `app_response'
+app/controllers/users_controller.rb:9:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:44:08 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5fd2963c0>, params: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.5ms | Allocations: 5422)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:3:in `app_response'
+app/controllers/users_controller.rb:9:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:44:15 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5fd11f1e0>, params: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms | Allocations: 3814)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:3:in `app_response'
+app/controllers/users_controller.rb:9:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:44:51 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5f828e4b8>, params: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 256ms (Views: 239.2ms | ActiveRecord: 2.5ms | Allocations: 8169)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:45:14 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd60035bbb8>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Create (18.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "anton"], ["email", "antony@moringa.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-22 08:45:14.714471"], ["updated_at", "2023-03-22 08:45:14.714471"]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 19.5ms | Allocations: 3372)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: users.password_digest):
+  
+app/controllers/users_controller.rb:5:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:45:37 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5f43fc010>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 21ms (Views: 1.6ms | ActiveRecord: 2.3ms | Allocations: 5866)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:46:04 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5fd02cb20>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "anton"], ["email", "antony@moringa.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-22 08:46:05.043746"], ["updated_at", "2023-03-22 08:46:05.043746"]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.3ms | Allocations: 4849)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: users.password_digest):
+  
+app/controllers/users_controller.rb:5:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:48:35 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd60cc21930>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 20ms (Views: 1.5ms | ActiveRecord: 2.2ms | Allocations: 5783)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:50:51 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5fc325d28>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 21ms (Views: 1.0ms | ActiveRecord: 2.8ms | Allocations: 5780)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:51:42 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5f45190b0>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 18ms (Views: 1.7ms | ActiveRecord: 2.5ms | Allocations: 5800)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:52:49 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd60cdbf2b0>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 22ms (Views: 1.1ms | ActiveRecord: 3.8ms | Allocations: 5779)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:53:27 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5f8462a00>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 19ms (Views: 1.4ms | ActiveRecord: 2.4ms | Allocations: 5785)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:53:27 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5f82a0af0>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 1.1ms | Allocations: 4160)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:54:04 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd6002abdd0>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 19ms (Views: 1.1ms | ActiveRecord: 2.4ms | Allocations: 5784)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:54:48 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd60cd59aa0>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 2.4ms | Allocations: 5784)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:54:48 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd608043040>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 18ms (Views: 1.2ms | ActiveRecord: 1.2ms | Allocations: 4160)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:55:44 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd5f43fe6a8>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 1.1ms | Allocations: 4160)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 11:59:23 +0300
+  
+SyntaxError (/home/antony/Development/code/phase4/TaskTrain/api/app/controllers/application_controller.rb:5: syntax error, unexpected ':', expecting `end'
+         status: status
+               ^
+):
+  
+app/controllers/application_controller.rb:5: syntax error, unexpected ':', expecting `end'
+app/controllers/application_controller.rb:5: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 12:00:21 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"anton", "email"=>"antony@moringa.com", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd60019d060>, params: {"username"=>"anton", "email"=>"antony@moringa.com", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"anton", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "anton"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 422 Unprocessable Entity in 18ms (Views: 1.3ms | ActiveRecord: 2.2ms | Allocations: 5772)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 12:00:59 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "username":"antony antony antony"
+  "email":"antony@moringa.com"
+  "password":"pigaluku"
+}
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 114)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `register'
+Started POST "/users" for 127.0.0.1 at 2023-03-22 12:01:19 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "password"=>"[FILTERED]", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd60cc5cff8>, params: {"username"=>"antony antony antony", "email"=>"antony@moringa.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"antony antony antony", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony antony antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 422 Unprocessable Entity in 351ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 4206)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-22 12:01:30 +0300
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"antony", "email"=>"antony@moringa.com", "password"=>"[FILTERED]", "user"=>{"username"=>"antony", "email"=>"antony@moringa.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00007fd60cbad378>, params: {"username"=>"antony", "email"=>"antony@moringa.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"register", "user"=>{"username"=>"antony", "email"=>"antony@moringa.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "antony"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "antony"], ["email", "antony@moringa.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-22 09:01:30.984717"], ["updated_at", "2023-03-22 09:01:30.984717"]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mTRANSACTION (122.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "antony"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "antony@moringa.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 201 Created in 431ms (Views: 1.4ms | ActiveRecord: 125.0ms | Allocations: 4620)
+
+
